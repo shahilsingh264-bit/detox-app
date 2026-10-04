@@ -442,8 +442,7 @@ const App = () => {
 
   const checkForUpdates = async () => {
     try {
-      // Replace YOUR_GITHUB_USERNAME with the actual username after uploading
-      const response = await fetch('https://api.github.com/repos/YOUR_GITHUB_USERNAME/DetoxApp/releases/latest');
+      const response = await fetch('https://api.github.com/repos/shahilsingh264-bit/DetoxApp/releases/latest');
       const data = await response.json();
       
       if (data.tag_name && data.tag_name !== `v${APP_VERSION}`) {
