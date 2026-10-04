@@ -666,16 +666,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#1E1E1E',
     borderTopWidth: 1,
     borderTopColor: '#333',
-    paddingBottom: Platform.OS === 'ios' ? 20 : 0,
+    paddingTop: 8,
+    paddingBottom: Platform.OS === 'ios' ? 30 : 12,
   },
   navItem: {
     flex: 1,
-    paddingVertical: 16,
+    paddingVertical: 18,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   navText: {
     color: '#888',
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   navTextActive: {
