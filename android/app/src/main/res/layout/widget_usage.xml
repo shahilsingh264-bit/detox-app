@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/widget_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:id="@+id/widget_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="7-DAY SCREEN TIME"
+            android:textColor="#BB86FC"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+            
+        <Button
+            android:id="@+id/widget_toggle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="View Today"
+            android:textSize="10sp"
+            android:backgroundTint="#333333"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/widget_total_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget_header"
+        android:layout_marginTop="8dp"
+        android:text="--h --m"
+        android:textColor="#00C851"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget_header"
+        android:layout_alignBaseline="@id/widget_total_time"
+        android:layout_alignParentEnd="true"
+        android:text="Grade: A"
+        android:textColor="#00C851"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/widget_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/widget_total_time"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#BB86FC"
+        android:progressBackgroundTint="#333333" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget_progress"
+        android:layout_marginTop="12dp">
+        
+        <ImageView
+            android:id="@+id/widget_app_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+            
+        <TextView
+            android:id="@+id/widget_top_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/widget_app_icon"
+            android:layout_toStartOf="@+id/widget_pomodoro_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:text="Most Used"
+            android:textColor="#AAAAAA"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="12sp" />
+            
+        <Button
+            android:id="@+id/widget_pomodoro_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Start Focus"
+            android:textSize="10sp"
+            android:backgroundTint="#BB86FC"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</RelativeLayout>
